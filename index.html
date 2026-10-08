@@ -1,0 +1,286 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Flow State — A Hands-On Guide to Google Flow</title>
+  <meta name="description" content="Follow along with the Google Flow workshop: create characters with custom voices, brainstorm with the Flow Agent, and generate a 1970s game show intro — with copy-ready prompts for every step.">
+  <link rel="stylesheet" href="fonts/fonts.css">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <header class="hero">
+    <div class="hero__media" aria-hidden="true"></div>
+    <div class="hero__inner">
+      <p class="eyebrow">Google Flow Workshop</p>
+      <h1>Flow State</h1>
+      <p class="hero__sub">A hands-on guide to Google Flow</p>
+      <a class="button" id="open-flow-hero" href="https://labs.google/fx/tools/flow" target="_blank" rel="noopener">Open Flow ↗</a>
+    </div>
+  </header>
+
+  <div class="layout">
+    <nav class="toc" aria-label="On this page">
+      <p class="toc__title">On this page</p>
+      <ol>
+        <li><a href="#welcome">Welcome</a></li>
+        <li><a href="#step-1">Open Flow</a></li>
+        <li><a href="#step-2">Create your character</a></li>
+        <li><a href="#step-3">Style your character</a></li>
+        <li><a href="#step-4">Location &amp; title refs</a></li>
+        <li><a href="#step-5">Intro video with Omni</a></li>
+        <li><a href="#step-6">Refine with Flow Tools</a></li>
+        <li><a href="#step-7">Build a comparison tool</a></li>
+        <li class="toc__group"><a href="#tips">Tips, tricks &amp; prompts</a></li>
+        <li class="toc__sub"><a href="#generation-tips">Generation tips</a></li>
+        <li class="toc__sub"><a href="#studio-shots">Studio shots</a></li>
+        <li class="toc__sub"><a href="#photo-styles">Photographic styles</a></li>
+        <li class="toc__sub"><a href="#sample-characters">Sample characters</a></li>
+        <li class="toc__sub"><a href="#camera-movements">Camera movements</a></li>
+      </ol>
+    </nav>
+
+    <main>
+      <section id="welcome" class="intro">
+        <p class="lede">Welcome to an interactive demo of Flow, Google’s AI creative studio. Today, we’re creating characters with custom voices, using the Flow Agent for visual brainstorming, and then prompting Gemini Omni Flash with references, dialog, and multishot instruction to generate a TV show intro scene.</p>
+
+        <aside class="callout">
+          <p class="callout__title">New to Flow?</p>
+          <p>Feel free to follow along with the demo, prompt for prompt. We’ll show each step live, and you can copy/paste the prompts below. If you’re more familiar with Flow or want to explore — create your own character, outfit, location, and title card, and combine them how you want. Used car salesman pushing hatchbacks in hell? Pilot ejecting from a damaged shuttle, the show title printed on his collar? Push it!</p>
+        </aside>
+
+        <p>Ok, let’s roll. We’re going to create a 10s intro shot for a 1970s game show called <strong>“Don’t Drop The Ball.”</strong> We’ll be running through each step live, but you can copy prompts for each step below, or catch back up if you get distracted generating leisure suits.</p>
+      </section>
+
+      <ol class="steps">
+        <!-- Step 1 -->
+        <li class="step" id="step-1">
+          <h2 class="step__title">Open Flow and click “New Project”</h2>
+          <p>This will take you into a blank project where we can start creating.</p>
+        </li>
+
+        <!-- Step 2 -->
+        <li class="step" id="step-2">
+          <h2 class="step__title">Create your character</h2>
+          <p>Character consistency is critical for any generative media project. We’ll start by creating a custom character:</p>
+          <ul class="actions">
+            <li>Click <em class="ui">Characters</em> in the left navigation rail, and describe your character in the prompt box, e.g.
+              <div class="prompt"><p class="prompt__text">a slender young man with messy red hair and a yellow sweater</p><span class="prompt__hint" aria-hidden="true">click to copy</span></div>
+            </li>
+            <li><strong>For best quality output</strong>, after describing your character, click the <em class="ui">Format</em> button, and generate with Nano Banana Pro.</li>
+            <li>Click <em class="ui">Select a voice</em>, and choose one of the default voices. Optionally, customize the voice with performance direction, e.g.
+              <div class="prompt"><p class="prompt__text">warm, low</p><span class="prompt__hint" aria-hidden="true">click to copy</span></div>
+              Save the custom voice and add it to your character.
+            </li>
+            <li>Select <em class="ui">Create Body</em> and add details about your character’s outfit.</li>
+          </ul>
+          <p>Once your character is complete, click <em class="ui">Done</em> in the top right to return to the project grid.</p>
+        </li>
+
+        <!-- Step 3 -->
+        <li class="step" id="step-3">
+          <h2 class="step__title">Style your character</h2>
+          <p>The Flow Agent is great for visualizing a wide variety of options. Let’s use the agent to create some outfit options for Tony, our host.</p>
+          <ul class="actions">
+            <li>While in the project view, add your character to the prompt box:
+              <ul>
+                <li>Drag and drop the character card into the prompt, <span class="or">or</span></li>
+                <li>Click the <kbd>+</kbd> button in the prompt box to open the asset finder, <span class="or">or</span></li>
+                <li>Type <kbd>@</kbd> in the prompt box, and type the character’s name to quick search.</li>
+              </ul>
+            </li>
+            <li>Make sure the <em class="ui">Agent</em> button in the prompt box is active.</li>
+            <li>Tell the agent what you want it to create:
+              <div class="prompt"><p class="prompt__text">Show me Tony in a variety of outfits from professional to casual. He's a 1970's game show host. 8 images, full body, white background, no props.</p><span class="prompt__hint" aria-hidden="true">click to copy</span></div>
+            </li>
+            <li>Favorite any outfits you like to find them quickly later.</li>
+          </ul>
+        </li>
+
+        <!-- Step 4 -->
+        <li class="step" id="step-4">
+          <h2 class="step__title">Create location and title references</h2>
+          <p>Now we’ll use the Flow Agent to create the setting and title card for our shot.</p>
+          <ul class="actions">
+            <li>With the agent active, ask for the set references:
+              <div class="prompt"><p class="prompt__text">We're creating references for a 1970's gameshow called "Don't Drop The Ball" Give me 8 options for the gameshow set ranging from simple to complex, no logos, no people on set, no TV equipment.</p><span class="prompt__hint" aria-hidden="true">click to copy</span></div>
+            </li>
+            <li>Then ask for the title card references:
+              <div class="prompt"><p class="prompt__text">Give me 8 physical signs for a TV show called "Don't Drop The Ball" ranging from simple to complex, studio shot on a white background, bold 1970’s type with large round lights around the edges.</p><span class="prompt__hint" aria-hidden="true">click to copy</span></div>
+            </li>
+            <li>Favorite the set and title sign you like best to access in the next step.</li>
+          </ul>
+          <aside class="tip"><strong>Tip:</strong> If your agent is busy generating, open the agent side panel and click the <em class="ui">New session</em> icon in the top right of the panel. You can have up to three agent sessions running at the same time.</aside>
+        </li>
+
+        <!-- Step 5 -->
+        <li class="step" id="step-5">
+          <h2 class="step__title">Create the intro video with Omni</h2>
+          <p>With our character and image references ready, let’s generate the shot:</p>
+          <ul class="actions">
+            <li>From the project view, with the agent active, describe the shots you want generated:
+              <div class="prompt"><p class="prompt__text">A 10s intro for a 1970's gameshow called "Don't Drop the Ball" Script: "Welcome to Don't Drop the Ball, Cincinnati's favorite gameshow!" Include a shot of the sign behind Tony with the lights flashing, a pan across the set, and a pan shot of the studio audience applauding.</p><span class="prompt__hint" aria-hidden="true">click to copy</span></div>
+            </li>
+            <li>Review your generations, check for alignment to the script and shot composition, and favorite the best intro — or tell your agent to run it again.</li>
+          </ul>
+        </li>
+
+        <!-- Step 6 -->
+        <li class="step" id="step-6">
+          <h2 class="step__title">Refine with Flow Tools</h2>
+          <p>Now that we’ve got our shot, let’s tweak it using custom tools created by friends of the Flow team.</p>
+          <ul class="actions">
+            <li>Click <em class="ui">Tools</em> in the left navigation.</li>
+            <li>Make sure you’re on the <em class="ui">Templates</em> tab at the top of the page, then scroll down to <strong>Pixel Bento</strong>.</li>
+            <li>Open the Pixel Bento tool, click <em class="ui">Load Media</em>, then select your favorited intro video.</li>
+            <li>Toggle on any of the filters to try them out; click the filter name to adjust it. Try the <strong>ANAROGU</strong> (last in the filter list) with the <strong>KOMOREBI</strong> preset for that faded look.</li>
+            <li>Once you’ve made your adjustments, click <em class="ui">Export</em> to save the edited video to your project grid.</li>
+          </ul>
+        </li>
+
+        <!-- Step 7 -->
+        <li class="step" id="step-7">
+          <h2 class="step__title">Create a simple video comparison tool</h2>
+          <p>Now that we’ve got two versions of our intro video, let’s create a simple Flow tool that will let us compare them directly.</p>
+          <ul class="actions">
+            <li>Click <em class="ui">Tools</em> in the left rail.</li>
+            <li>Click <em class="ui">Create Tool</em> in the banner.</li>
+            <li>Describe the tool you want:
+              <div class="prompt"><p class="prompt__text">Create a tool to view two videos at the same time in sync.</p><span class="prompt__hint" aria-hidden="true">click to copy</span></div>
+            </li>
+            <li>Load up your intro video and edited intro video to test it out!</li>
+            <li><span class="optional">Optional</span> Add more functionality to your tool. Try:
+              <div class="prompt"><p class="prompt__text">Add a view that overlays the two videos and gives me a slider to reveal the bottom video</p><span class="prompt__hint" aria-hidden="true">click to copy</span></div>
+            </li>
+          </ul>
+        </li>
+      </ol>
+
+      <!-- ===================== Tips, Tricks & Prompts ===================== -->
+      <section id="tips" class="tips">
+        <h2 class="section-title">Tips, tricks &amp; prompts</h2>
+
+        <section id="generation-tips">
+          <h3>Generation tips</h3>
+          <dl class="tip-list">
+            <div><dt>Anchor the frame</dt><dd>Use “camera left” or “in the bottom third of the frame” or “by the coat rack” to describe where things should be placed in a scene. This works surprisingly well.</dd></div>
+            <div><dt>Storyboards are still king</dt><dd>Even a napkin sketch can help the models understand how to frame a scene. Label the sketch to describe camera movements or define landmarks.</dd></div>
+            <div><dt>Avoid ambiguity</dt><dd>Rewriters and models will add detail where you don’t prescribe it. The assumptions made will often be generic. Detail is the key to unique outcomes.</dd></div>
+            <div><dt>Set boundaries</dt><dd>When editing, it can help to include things you don’t want to change: “Change the camera angle, keep all character actions exactly the same.”</dd></div>
+            <div><dt>Set focus</dt><dd>Tell the model what you want it to pay attention to: “Copy the art direction exactly,” “use this exact camera motion,” “compose the shot exactly like this.”</dd></div>
+            <div><dt>Create variations</dt><dd>Tell Omni to “create a 2×2 grid of four different camera angles of the same shot” — specify what shots you want to see, and feed the ones you like back to Omni to upscale.</dd></div>
+            <div><dt>Edit and generate are different skills</dt><dd>Omni is a better editing model than generation model. Veo is a better generation model than editing model. Use the model that best fits your need.</dd></div>
+          </dl>
+        </section>
+
+        <section id="studio-shots">
+          <h3>Studio shots for references</h3>
+          <div class="card-grid card-grid--2">
+            <article class="card">
+              <img src="images/studio-character.jpg" alt="Studio portrait example on a seamless white background" loading="lazy" width="1200" height="670">
+              <div class="card__body">
+                <h4>Studio character</h4>
+                <div class="prompt prompt--card"><p class="prompt__text">Ultra-photorealistic studio portrait of [describe character], shot with a 105mm lens, Hasselblad H6D-100c. Centered, forward-facing bust shot on a seamless white background. Clamshell lighting via a top beauty dish and bottom reflector creates luminous skin with visible micro-pores, fine downy hair, and sharp circular catchlights in the eyes. Every surface, from the organic skin texture to the coarse fabric fibers, is rendered with hyper-tactile detail. The entire head, hair, and shoulders are fully contained within the frame. The lighting minimizes shadows, emphasizing a direct, grounded gaze and the physical weight of the attire against the form.</p><span class="prompt__hint" aria-hidden="true">click to copy</span></div>
+              </div>
+            </article>
+            <article class="card">
+              <img src="images/studio-object.jpg" alt="Studio product shot example on a seamless white background" loading="lazy" width="1200" height="670">
+              <div class="card__body">
+                <h4>Studio object</h4>
+                <div class="prompt prompt--card"><p class="prompt__text">Ultra-photorealistic studio product shot of [describe object], shot with a 105mm lens, Hasselblad H6D-100c. Centered, forward-facing shot on a seamless white background. Clamshell lighting via a top beauty dish and bottom reflector creates luminous surfaces that highlight textural details and surface reflections. Every surface, from organic textures to coarse fabric fibers, is rendered with hyper-tactile detail. The object should be fully contained within the frame. The lighting minimizes shadows, emphasizing a direct, grounded object with clear physical weight and form. No lighting or camera equipment in the background.</p><span class="prompt__hint" aria-hidden="true">click to copy</span></div>
+              </div>
+            </article>
+          </div>
+        </section>
+
+        <section id="photo-styles">
+          <h3>Photographic styles</h3>
+          <div class="card-grid card-grid--2">
+            <article class="card">
+              <img src="images/style-digital-realism.jpg" alt="Example image in the Digital Realism style" loading="lazy" width="1200" height="670">
+              <div class="card__body">
+                <h4>Digital Realism</h4>
+                <div class="prompt prompt--card"><p class="prompt__text">Clean digital sensor photography, ultra-high resolution, noise-free. Natural realism, slightly desaturated neutral color palette with muted earthy undertones. Ultra-soft omnidirectional overcast ambient lighting, 1:1 flat lighting ratio, smooth shadow roll-off, zero harsh specularity. 50mm lens, T4.0, moderate depth of field. Razor-sharp central focal plane, soft but structurally recognizable background defocus.</p><span class="prompt__hint" aria-hidden="true">click to copy</span></div>
+              </div>
+            </article>
+            <article class="card">
+              <img src="images/style-fujifilm-eterna-500.jpg" alt="Example image in the Fujifilm Eterna 500 style" loading="lazy" width="1200" height="670">
+              <div class="card__body">
+                <h4>Fujifilm Eterna 500</h4>
+                <div class="prompt prompt--card"><p class="prompt__text">Medium format color negative film emulation, overexposed +1 stop. Low-contrast pastel sensitometry. Warm, muted pale color palette. 50mm lens, T8, exceptionally deep depth of field. Soft, diffused, low-angle directional daylight casting gentle downward shadow shapes with high-value ambient fill. Fine, organic film grain and smooth highlight roll-off.</p><span class="prompt__hint" aria-hidden="true">click to copy</span></div>
+              </div>
+            </article>
+            <article class="card">
+              <img src="images/style-cinestill-800t.jpg" alt="Example image in the CineStill 800T style" loading="lazy" width="1200" height="670">
+              <div class="card__body">
+                <h4>CineStill 800T</h4>
+                <div class="prompt prompt--card"><p class="prompt__text">Low-key cinematic lighting, high-contrast mixed color temperature. Saturated deep red practical light pools, contrasted by isolated cool cyan point sources. Heavy optical halation on luminous highlights. Deep crushed black negative space. 50mm lens, T2.8, mid-plane focus, soft background circular bokeh, high ISO grain, 1/4 mist diffusion.</p><span class="prompt__hint" aria-hidden="true">click to copy</span></div>
+              </div>
+            </article>
+            <article class="card">
+              <img src="images/style-bleach-bypass.jpg" alt="Example image in the Bleach Bypass style" loading="lazy" width="1200" height="670">
+              <div class="card__body">
+                <h4>Bleach Bypass</h4>
+                <div class="prompt prompt--card"><p class="prompt__text">Cinematic bleach bypass film emulation. High-contrast retained silver sensitometry, desaturated palette, elevated micro-contrast. 85mm macro, T2.8, shallow depth of field. Overexposed, luminous, and heavily blurred background with soft specular bokeh. Pronounced, gritty film grain.</p><span class="prompt__hint" aria-hidden="true">click to copy</span></div>
+              </div>
+            </article>
+            <article class="card">
+              <img src="images/style-panchromatic-monochrome.jpg" alt="Example image in the Panchromatic Monochrome style" loading="lazy" width="1200" height="670">
+              <div class="card__body">
+                <h4>Panchromatic monochrome</h4>
+                <div class="prompt prompt--card"><p class="prompt__text">High-contrast panchromatic monochrome film stock. 85mm lens, T1.2. Extremely shallow depth of field with a razor-thin horizontal focal plane. Soft, diffused, wrap-around top lighting. Luminous, blooming white highlights on the focused plane contrasting against entirely crushed black regions. Completely out-of-focus background rendering large, soft, overlapping circular bokeh. Fine silver halide grain.</p><span class="prompt__hint" aria-hidden="true">click to copy</span></div>
+              </div>
+            </article>
+            <article class="card">
+              <img src="images/style-flash-burnt.jpg" alt="Example image in the Flash Burnt style" loading="lazy" width="1200" height="670">
+              <div class="card__body">
+                <h4>Flash burnt</h4>
+                <div class="prompt prompt--card"><p class="prompt__text">The single, dominant light source is a harsh, direct, slightly cool on-camera flash, aimed directly at the subject. The subject is isolated in a bright pool of light, with stark, hard-edged shadows on the ground and any surfaces behind the subject, and sharp, blown-out highlights on skin, reflective surfaces (like satin or leather), and jewelry. Unlit areas of the scene are rendered as deep, inky, crushed blacks, with very little detail. Deep depth of field, no bokeh. Shot with 15mm ultra wide-angle lens, perspective distortion at the edges of the frame, and heavy, pronounced film grain. Slow shutter speed combined with the flash freezes the subject while allowing the background or moving limbs to have a slight motion blur.</p><span class="prompt__hint" aria-hidden="true">click to copy</span></div>
+              </div>
+            </article>
+          </div>
+        </section>
+
+        <section id="sample-characters">
+          <h3>Sample characters</h3>
+          <p>To use these characters, click one to open its share page in Flow, then click <em class="ui">Remix</em> and choose a project to add it to. This will add both the image and the character reference for you to use in your own generations!</p>
+          <div class="card-grid card-grid--3">
+            <a class="card card--link" id="char-marzolf" href="images/character-marzolf.jpg" target="_blank" rel="noopener" data-external-href="https://labs.google/fx/tools/flow/shared/image/45bfaa1e-9ab0-4669-8984-afc0f3ba3adb">
+              <img src="images/character-marzolf.jpg" alt="Marzolf, a bearded man in glasses sitting on a bench by a canal at night" loading="lazy" width="1200" height="670">
+              <div class="card__body card__body--row"><h4>Marzolf</h4><span class="arrow" aria-hidden="true">↗</span></div>
+            </a>
+            <a class="card card--link" id="char-kammy" href="images/character-kammy.jpg" target="_blank" rel="noopener" data-external-href="https://labs.google/fx/tools/flow/shared/image/40d8ea63-4382-4c55-b23c-7f4c69f674a5">
+              <img src="images/character-kammy.jpg" alt="Kammy, a sample Flow character" loading="lazy" width="1200" height="670">
+              <div class="card__body card__body--row"><h4>Kammy</h4><span class="arrow" aria-hidden="true">↗</span></div>
+            </a>
+            <a class="card card--link" id="char-rhenna" href="images/character-rhenna.jpg" target="_blank" rel="noopener" data-external-href="https://labs.google/fx/tools/flow/shared/image/7440d677-6b7a-447f-b7df-bc795ea68934">
+              <img src="images/character-rhenna.jpg" alt="Rhenna, a sample Flow character" loading="lazy" width="1200" height="670">
+              <div class="card__body card__body--row"><h4>Rhenna</h4><span class="arrow" aria-hidden="true">↗</span></div>
+            </a>
+          </div>
+        </section>
+
+        <section id="camera-movements">
+          <h3>Camera movements</h3>
+          <div class="move-list">
+            <div class="move"><h4>Controlled pull back</h4><div class="prompt"><p class="prompt__text">Controlled pull back, camera moves backward away from the subject, revealing [SURROUNDINGS]</p><span class="prompt__hint" aria-hidden="true">click to copy</span></div></div>
+            <div class="move"><h4>Slow dolly in</h4><div class="prompt"><p class="prompt__text">Slow dolly push forward, maintaining eye contact with subject. A cinematic shot of [SUBJECT]</p><span class="prompt__hint" aria-hidden="true">click to copy</span></div></div>
+            <div class="move"><h4>Compression zoom (Hitchcock effect)</h4><div class="prompt"><p class="prompt__text">Dolly zoom, camera moves backward while lens zooms in. Subject stays same size, background warps dramatically.</p><span class="prompt__hint" aria-hidden="true">click to copy</span></div></div>
+            <div class="move"><h4>Slow cinematic arc</h4><div class="prompt"><p class="prompt__text">Slow cinematic arc, wide curve around the subject showing their profile</p><span class="prompt__hint" aria-hidden="true">click to copy</span></div></div>
+            <div class="move"><h4>360 orbit</h4><div class="prompt"><p class="prompt__text">360-degree camera orbit around [SUBJECT], steady and continuous motion</p><span class="prompt__hint" aria-hidden="true">click to copy</span></div></div>
+            <div class="move"><h4>Epic drone reveal</h4><div class="prompt"><p class="prompt__text">Epic drone reveal, rising and tilting down to reveal the scene</p><span class="prompt__hint" aria-hidden="true">click to copy</span></div></div>
+          </div>
+        </section>
+      </section>
+
+      <footer class="footer">
+        <p>Made for the Google Flow workshop series. <a href="https://labs.google/fx/tools/flow" target="_blank" rel="noopener">Try Flow ↗</a></p>
+      </footer>
+    </main>
+  </div>
+
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+  <script src="script.js"></script>
+</body>
+</html>
